@@ -1,0 +1,9 @@
+name: CUSTOM
+main: Tarzax\Core
+version: 0.0.1
+api: 5.0.0
+author: Tarzax
+
+permissions:
+  TForm.use:
+    default: true
