@@ -23,10 +23,8 @@ class Kit extends Command {
         }
     }
 
-
-
     public function kitForm(Player $sender) {
-        $form = new SimpleForm(function (Player $sender, $data)
+        $form = new SimpleForm(function (Player $sender)
         {
             if($data = null){
                 return;
