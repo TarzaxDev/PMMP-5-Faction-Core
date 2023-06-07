@@ -7,3 +7,5 @@ author: Tarzax
 permissions:
   TForm.use:
     default: true
+  kit.use:
+    default: true

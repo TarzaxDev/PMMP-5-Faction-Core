@@ -17,11 +17,8 @@ class Kit extends Command {
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args) {
-        $rank = Core::getInstance()->rankAPI;
         if ($sender instanceof Player) {
-            if ($rank->getRank("Player")) {
-                $this->kitForm($sender);
-            }
+            $sender->sendMessage("h");
         } else {
             $sender->sendMessage(Utils::messageError());
         }

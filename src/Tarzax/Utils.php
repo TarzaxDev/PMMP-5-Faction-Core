@@ -20,4 +20,8 @@ class Utils {
     public static function getConfigYML(string $filename) {
         return new Config(Core::getInstance()->getDataFolder() . $filename, Config::YAML);
     }
+
+    public static function getConfigJSON(string $filename) {
+        return new Config(Core::getInstance()->getDataFolder() . $filename, Config::JSON);
+    }
 }
