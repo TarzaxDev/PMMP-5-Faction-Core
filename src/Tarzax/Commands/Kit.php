@@ -5,6 +5,7 @@ namespace Tarzax\Commands;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
+use Tarzax\Core;
 use Tarzax\Utils;
 use Vecnavium\FormsUI\SimpleForm;
 
@@ -16,8 +17,11 @@ class Kit extends Command {
     }
 
     public function execute(CommandSender $sender, string $commandLabel, array $args) {
+        $rank = Core::getInstance()->rankAPI;
         if ($sender instanceof Player) {
-
+            if ($rank->getRank("Player")) {
+                $this->kitForm($sender);
+            }
         } else {
             $sender->sendMessage(Utils::messageError());
         }
