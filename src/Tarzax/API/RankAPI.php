@@ -2,27 +2,32 @@
 
 namespace Tarzax\API;
 
+use pocketmine\utils\Config;
+
 class RankAPI {
+    const WOOD_RANK = "Wood";
+    const STONE_RANK = "Stone";
+    const IRON_RANK = "Iron";
+    const GOLDEN_RANK = "Golden";
+    const DIAMOND_RANK = "Diamond";
+    const DEFAULT_RANK = "Player";
 
-    public function rankList(): array {
-        return [
-            "Wood",     //0
-            "Stone",    //1
-            "Iron",     //2
-            "Gold",     //3
-            "Diamond",  //4
-        ];
+    private Config $cfg;
+
+    public function __construct(Config $cfg)
+    {
+        $this->cfg = $cfg;
     }
 
-    public function createRank() {
-
-    }
-
-    public function deleteRank() {
+    public function playerHasAccount(string $name): bool {
 
     }
 
     public function addRank() {
+
+    }
+
+    public function getRank($player): string {
 
     }
 
