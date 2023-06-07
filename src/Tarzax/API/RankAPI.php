@@ -20,22 +20,28 @@ class RankAPI {
     }
 
     public function playerHasAccount(string $name): bool {
-
+        return $this->cfg ->exists($name);
     }
 
-    public function addRank() {
-
+    public function createAccount($name): void {
+        if ($this->playerHasAccount($name)) {
+            $this->cfg->set($name, self::DEFAULT_RANK);
+            $this->cfg->save();
+        }
     }
 
-    public function getRank($player): string {
-
+    public function getRank($name): string {
+        if ($this->playerHasAccount($name)) {
+            return $this->cfg->get($name);
+        }
     }
 
-    public function setRank() {
-
-    }
-
-    public function removeRank() {
-
+    public function setRank(string $name, string $rank): bool {
+        if ($this->playerHasAccount($name)) {
+            $this->cfg->set($name, $rank);
+            $this->cfg->save();
+            return true;
+        }
+        return false;
     }
 }
