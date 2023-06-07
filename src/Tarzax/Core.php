@@ -6,6 +6,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
 use pocketmine\utils\SingletonTrait;
 use Tarzax\Commands\CForm;
+use Tarzax\Commands\Kit;
 use Tarzax\Commands\TForm;
 
 class Core extends PluginBase
@@ -17,6 +18,7 @@ class Core extends PluginBase
         Server::getInstance()->getCommandMap()->registerAll("", [
             new TForm(),
             new CForm(),
+            new Kit(),
         ]);
     }
 }
