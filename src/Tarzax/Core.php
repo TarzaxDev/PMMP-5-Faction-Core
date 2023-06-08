@@ -5,7 +5,6 @@ namespace Tarzax;
 use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
 use pocketmine\utils\SingletonTrait;
-use Tarzax\API\RankAPI;
 use Tarzax\Commands\CForm;
 use Tarzax\Commands\Kit;
 use Tarzax\Commands\TForm;
