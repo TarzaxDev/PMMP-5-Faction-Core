@@ -19,6 +19,7 @@ class PlayerEvents implements Listener {
             Server::getInstance()->broadcastPopup("§a+{$playerName}");
         }
         if (!RankAPI::existsPlayer($playerName)) {
+            var_dump("test");
             RankAPI::initPlayer($playerName);
         }
     }
