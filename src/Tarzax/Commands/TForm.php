@@ -10,14 +10,12 @@ use Vecnavium\FormsUI\SimpleForm;
 class TForm extends Command
 {
 
-    public function __construct()
-    {
+    public function __construct() {
         parent::__construct("tform", "custom form", "/tform", []);
         $this->setPermissions(["TForm.use"]);
     }
 
-    public function execute(CommandSender $sender, string $commandLabel, array $args)
-    {
+    public function execute(CommandSender $sender, string $commandLabel, array $args) {
         if($sender instanceof Player)
         {
             $this->TForm($sender);
@@ -26,8 +24,7 @@ class TForm extends Command
         }
     }
 
-    public function TForm($sender)
-    {
+    public function TForm($sender) {
         $form = new SimpleForm(function (Player $sender, $data)
         {
             if($data = null){

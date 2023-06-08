@@ -9,3 +9,5 @@ permissions:
     default: true
   kit.use:
     default: true
+  rank.use:
+    default: op
