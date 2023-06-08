@@ -15,8 +15,6 @@ class Core extends PluginBase
 {
     use SingletonTrait;
 
-    public RankAPI $rankAPI;
-
     protected function onEnable(): void
     {
         $this::setInstance($this);
