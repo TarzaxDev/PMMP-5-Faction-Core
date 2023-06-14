@@ -9,6 +9,7 @@ use Tarzax\Commands\Kit;
 use Tarzax\Commands\RankCMD;
 use Tarzax\Commands\TForm;
 use Tarzax\Listeners\PlayerEvents;
+use tedo0627\inventoryui\InventoryUI;
 
 class Core extends PluginBase
 {
@@ -24,5 +25,6 @@ class Core extends PluginBase
             new RankCMD(),
         ]);
         Server::getInstance()->getPluginManager()->registerEvents(new PlayerEvents, $this);
+        InventoryUI::setup($this);
     }
 }

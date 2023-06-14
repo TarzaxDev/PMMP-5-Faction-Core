@@ -34,10 +34,25 @@ class TForm extends Command
             {
                 case 0:
                     break;
+                case 1:
+                    break;
+		        case 2:
+                    break;
+		        case 3:
+                    break;
+		        case 4:
+                    break;
+		        case 5:
+                    break;
             }
         });
-        $form->setTitle("TForm");
+        $form->setTitle("OBUI");
         $form->setContent("content");
+        $form->addButton("leave");
+        $form->addButton("leave");
+        $form->addButton("leave");
+        $form->addButton("leave");
+        $form->addButton("leave");
         $form->addButton("leave");
         $form->sendToPlayer($sender);
     }

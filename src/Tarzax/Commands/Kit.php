@@ -6,6 +6,7 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 use Tarzax\Core;
+use Tarzax\Inventories\OneLineInventory;
 use Tarzax\Utils;
 use Vecnavium\FormsUI\SimpleForm;
 
@@ -18,7 +19,7 @@ class Kit extends Command {
 
     public function execute(CommandSender $sender, string $commandLabel, array $args) {
         if ($sender instanceof Player) {
-            $sender->sendMessage("h");
+            $sender->setCurrentWindow(new OneLineInventory());
         } else {
             $sender->sendMessage(Utils::messageError());
         }
